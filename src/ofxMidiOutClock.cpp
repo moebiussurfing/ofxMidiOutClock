@@ -11,6 +11,10 @@ void ofxMidiOutClock::setupParams() {
 	portName.set("Port Name", "none");
 	bpm.set("Bpm", 120.0f, OFXMIDIOUTCLOCK_MIN_BPM, OFXMIDIOUTCLOCK_MAX_BPM);
 
+	portName.setSerializable(false);
+	bpm.setSerializable(false);
+	bDebug.setSerializable(false);
+
 	params.setName("ofxMidiOutClock");
 	params.add(bPlay);
 	params.add(vReconnect);
